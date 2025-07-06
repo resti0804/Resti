@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resti Nur Fadilah - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #fbb6ce;
+      --secondary: #f5f5f5;
+      --dark: #1e1e1e;
+      --text: #333;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: var(--text);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header.hero {
+      background: var(--secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--primary);
+      margin-top: 2rem;
+    }
+
+    section.intro-dark {
+      background-color: var(--dark);
+      color: white;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .intro-dark .text {
+      max-width: 500px;
+    }
+
+    .intro-dark h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-dark p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .intro-dark ul {
+      list-style: none;
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .intro-dark li {
+      font-size: 1.1rem;
+    }
+
+    .intro-dark .photo {
+      max-width: 300px;
+    }
+
+    .intro-dark .photo img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    section.info {
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      background-color: var(--white);
+    }
+
+    .info-card {
+      background-color: var(--secondary);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .info-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card li {
+      padding: 0.3rem 0;
+    }
+
+    .projects {
+      padding: 4rem 2rem;
+      background: var(--secondary);
+    }
+
+    .projects h2 {
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-gallery .project {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .project-gallery .project:hover {
+      transform: scale(1.02);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero fade-in">
+    <h1>I'M <span>RESTI</span> FADILAH</h1>
+    <p>Creative & Engineering Management Enthusiast</p>
+    <img src="https://i.imgur.com/iMGdJSh.jpeg" alt="Resti Nur Fadilah">
+  </header>
+
+  <section class="intro-dark fade-in">
+    <div class="text">
+      <h2>HELLO, I'M RESTI</h2>
+      <p>Passionate student in Engineering Management dedicated to crafting meaningful and communicative visual experiences. With a love for exploration and visual creativity, I aim to bring life to ideas that connect.</p>
+      <ul>
+        <li><strong>∞</strong> Passion for Creativity</li>
+      </ul>
+    </div>
+    <div class="photo">
+      <img src="https://i.imgur.com/iMGdJSh.jpeg" alt="Resti Full Body">
+    </div>
+  </section>
+
+  <section class="info fade-in">
+    <div class="info-card">
+      <img src="https://img.icons8.com/fluency/96/secured-letter.png" alt="Contact Icon">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: restinurfadillah13@gmail.com</li>
+        <li>Instagram: @resti.fadillah_</li>
+        <li>WhatsApp: 0882 7168 1774</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <img src="https://img.icons8.com/fluency/96/graduation-cap.png" alt="Education Icon">
+      <h3>Education</h3>
+      <ul>
+        <li>2024–2029</li>
+        <li>Batam Institute of Technology (ITEBA)</li>
+        <li>Currently Studying</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <img src="https://img.icons8.com/fluency/96/laptop-settings.png" alt="Software Icon">
+      <h3>Software Skills</h3>
+      <ul>
+        <li>Microsoft Office</li>
+        <li>Canva</li>
+        <li>CapCut</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <img src="https://img.icons8.com/fluency/96/idea-sharing.png" alt="Soft Skill Icon">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Creativity</li>
+        <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Adaptability</li>
+        <li>Problem Solving</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects fade-in">
+    <h2>Featured Projects</h2>
+    <div class="project-gallery">
+      <div class="project" onclick="openPopup('https://i.imgur.com/clRf80S.jpeg')">
+        <img src="https://i.imgur.com/clRf80S.jpeg" alt="Travel Photo 1">
+        <h3>Adventure Trip</h3>
+        <p>Exploring nature and documenting beautiful landscapes.</p>
+      </div>
+      <div class="project" onclick="openPopup('https://i.imgur.com/3WJvO1L.jpeg')">
+        <img src="https://i.imgur.com/3WJvO1L.jpeg" alt="Travel Photo 2">
+        <h3>Seaside Moment</h3>
+        <p>Capturing calm and creativity by the sea.</p>
+      </div>
+      <div class="project" onclick="openPopup('https://i.imgur.com/IaW5Zg8.jpeg')">
+        <img src="https://i.imgur.com/IaW5Zg8.jpeg" alt="Travel Photo 3">
+        <h3>City Exploration</h3>
+        <p>Walking through new cities and soaking in inspiration.</p>
+      </div>
+      <div class="project" onclick="openPopup('https://i.imgur.com/dpCvkzL.jpeg')">
+        <img src="https://i.imgur.com/dpCvkzL.jpeg" alt="City Exploration 2">
+        <h3>City Exploration</h3>
+        <p>Another angle of urban discovery and hidden gems.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup" id="imagePopup" onclick="closePopup()">
+    <img src="" alt="Popup Image" id="popupImage">
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    function openPopup(src) {
+      document.getElementById('popupImage').src = src;
+      document.getElementById('imagePopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('imagePopup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
